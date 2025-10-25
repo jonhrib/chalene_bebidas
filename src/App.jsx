@@ -4,14 +4,39 @@ import nossaLojaImage from './assets/images/nossa-loja.png';
 
 // Mock data initialization
 const initialProducts = [
+  // Cervejas (expandida)
   { id: 1, name: 'Cerveja Artesanal IPA', price: 12.90, category: 'Cervejas', featured: true, description: 'Cerveja artesanal com notas cítricas e amargor equilibrado', image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop' },
+  { id: 7, name: 'Heineken Long Neck', price: 8.90, category: 'Cervejas', featured: false, description: 'Cerveja lager puro malte internacional', image: 'https://images.unsplash.com/photo-1571613316887-6f8d5cbf7ef7?w=400&h=300&fit=crop' },
+  { id: 8, name: 'Brahma Duplo Malte', price: 5.50, category: 'Cervejas', featured: false, description: 'Cerveja tradicional brasileira com sabor marcante', image: 'https://images.unsplash.com/photo-1586996292898-71f4036c4e07?w=400&h=300&fit=crop' },
+  { id: 9, name: 'Skol Pilsen Lata 350ml', price: 4.25, category: 'Cervejas', featured: false, description: 'Cerveja refrescante e fácil de beber', image: 'https://images.unsplash.com/photo-1572656313431-3e13bc58df91?w=400&h=300&fit=crop' },
+
+  // Vinhos (expandida)
   { id: 2, name: 'Vinho Tinto Malbec', price: 45.50, category: 'Vinhos', featured: true, description: 'Vinho tinto argentino com corpo médio e taninos suaves', image: 'https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=400&h=300&fit=crop' },
+  { id: 10, name: 'Vinho Sangue de Boi Suave', price: 18.90, category: 'Vinhos', featured: false, description: 'Vinho de mesa brasileiro, suave e acessível', image: 'https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=400&h=300&fit=crop' },
+  { id: 11, name: 'Vinho Branco Casal Garcia', price: 32.00, category: 'Vinhos', featured: false, description: 'Vinho branco português leve e frutado', image: 'https://images.unsplash.com/photo-1474722883778-792e799030e3?w=400&h=300&fit=crop' },
+
+  // Destilados (expandida)
   { id: 3, name: 'Whisky Escocês 12 anos', price: 189.90, category: 'Destilados', featured: false, description: 'Whisky single malt com notas de baunilha e carvalho', image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?w=400&h=300&fit=crop' },
+  { id: 6, name: 'Cachaça Premium', price: 65.30, category: 'Destilados', featured: true, description: 'Cachaça envelhecida em carvalho francês', image: 'https://images.unsplash.com/photo-1571902943206-3058411b6e6e?w=400&h=300&fit=crop' },
+  { id: 12, name: 'Smirnoff Ice', price: 9.90, category: 'Destilados', featured: false, description: 'Bebida refrescante à base de vodka', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop' },
+  { id: 13, name: 'Vodka Absolut', price: 42.00, category: 'Destilados', featured: false, description: 'Vodka sueca premium, pura e cristalina', image: 'https://images.unsplash.com/photo-1603712610496-5362a2c93c88?w=400&h=300&fit=crop' },
+  { id: 14, name: 'Gin Tanqueray', price: 98.00, category: 'Destilados', featured: false, description: 'Gin londrino com botânicos selecionados', image: 'https://images.unsplash.com/photo-1598908314727-897fd0e8d0e9?w=400&h=300&fit=crop' },
+
+  // Espumantes
   { id: 5, name: 'Champagne Brut', price: 89.00, category: 'Espumantes', featured: false, description: 'Espumante seco perfeito para celebrações', image: 'https://images.unsplash.com/photo-1535958636471-bd4c8ebf70c4?w=400&h=300&fit=crop' },
-  { id: 6, name: 'Cachaça Premium', price: 65.30, category: 'Destilados', featured: true, description: 'Cachaça envelhecida em carvalho francês', image: 'https://images.unsplash.com/photo-1571902943206-3058411b6e6e?w=400&h=300&fit=crop' }
+  { id: 15, name: 'Espumante Brasileiro Brut', price: 28.50, category: 'Espumantes', featured: false, description: 'Espumante nacional de alta qualidade', image: 'https://images.unsplash.com/photo-1558616041-7b9d7c81925e?w=400&h=300&fit=crop' },
+
+  // Não Alcoólicas (nova categoria)
+  { id: 16, name: 'Água Mineral Sem Gás', price: 3.00, category: 'Não Alcoólicas', featured: false, description: 'Água mineral natural 500ml', image: 'https://images.unsplash.com/photo-1548839149-6d15e4a9e2c9?w=400&h=300&fit=crop' },
+  { id: 17, name: 'Refrigerante Coca-Cola', price: 6.50, category: 'Não Alcoólicas', featured: false, description: 'Refrigerante tradicional 2L', image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&h=300&fit=crop' },
+  { id: 18, name: 'Suco de Laranja Natural', price: 7.90, category: 'Não Alcoólicas', featured: false, description: 'Suco de laranja integral 1L', image: 'https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=400&h=300&fit=crop' },
+  { id: 19, name: 'Energético Red Bull', price: 11.90, category: 'Não Alcoólicas', featured: false, description: 'Energético original 250ml', image: 'https://images.unsplash.com/photo-1633479393886-655f9e681b31?w=400&h=300&fit=crop' },
+
+  // Energéticos e Misc (nova categoria)
+  { id: 20, name: 'Água Tônica', price: 5.50, category: 'Miscelânea', featured: false, description: 'Água tônica para drinks 1L', image: 'https://images.unsplash.com/photo-1645111326860-6f2f92c516b6?w=400&h=300&fit=crop' }
 ];
 
-const initialCategories = ['Cervejas', 'Vinhos', 'Destilados', 'Espumantes', 'Cafés', 'Destilados'];
+const initialCategories = ['Cervejas', 'Vinhos', 'Destilados', 'Espumantes', 'Cafés', 'Destilados', 'Miscelânea'];
 
 const initialCompanyInfo = {
   name: 'Chalene Bebidas',
