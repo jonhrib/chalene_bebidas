@@ -1,0 +1,467 @@
+/* style.css - VERSÃO MODERNA E ELEGANTE */
+:root {
+    --primary-color: #8e7a18;
+    --primary-dark: #756312;
+    --primary-darker: #5d4e0e;
+    --primary-light: #a8922c;
+    --primary-lighter: #c8b45c;
+    --primary-soft: rgba(142, 122, 24, 0.1);
+    --gradient-primary: linear-gradient(135deg, #8e7a18 0%, #a8922c 100%);
+    --gradient-gold: linear-gradient(135deg, #8e7a18 0%, #c8b45c 100%);
+    --shadow-soft: 0 5px 15px rgba(142, 122, 24, 0.1);
+    --shadow-medium: 0 10px 30px rgba(142, 122, 24, 0.15);
+    --shadow-large: 0 20px 50px rgba(142, 122, 24, 0.2);
+}
+
+/* ===== RESET E TIPOGRAFIA ===== */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.display-4 {
+    font-weight: 800;
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== NAVBAR MODERNA ===== */
+.navbar {
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    background: rgba(33, 37, 41, 0.95) !important;
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+    width: 80%;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* ===== HERO SECTION MODERNA ===== */
+.hero-section {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%238e7a18" fill-opacity="0.03" points="0,1000 1000,0 1000,1000"/></svg>');
+    background-size: cover;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-section .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-section img {
+    border-radius: 1rem;
+    box-shadow: var(--shadow-large);
+    transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+    transition: transform 0.5s ease;
+}
+
+.hero-section img:hover {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+/* ===== BOTÕES MODERNOS ===== */
+.btn {
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    box-shadow: 0 4px 15px rgba(142, 122, 24, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(142, 122, 24, 0.4);
+    background: var(--gradient-gold);
+}
+
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+}
+
+/* ===== SEÇÃO DE DESTAQUES MODERNA ===== */
+.destaques {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+}
+
+.destaques h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.destaques h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+/* ===== CARDS DE PRODUTOS MODERNOS ===== */
+.produto-card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    background: white;
+    position: relative;
+}
+
+.produto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-large);
+}
+
+.produto-img {
+    transition: transform 0.5s ease;
+    height: 250px;
+    object-fit: cover;
+}
+
+.produto-card:hover .produto-img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.preco {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* ===== BADGES MODERNOS ===== */
+.badge {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* ===== SEÇÃO SOBRE MODERNA ===== */
+.historia-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.historia-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-soft);
+    border-left: 4px solid var(--primary-color);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 2rem;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+.valor-item {
+    padding: 2rem 1rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.valor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.valor-item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== FORMULÁRIO MODERNO ===== */
+.form-control {
+    border: 2px solid #e9ecef;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(142, 122, 24, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* ===== FOOTER MODERNO ===== */
+footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    padding: 60px 0 30px;
+}
+
+footer h5 {
+    color: var(--primary-lighter);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+footer p {
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.admin-access {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.admin-access a {
+    transition: all 0.3s ease;
+}
+
+.admin-access a:hover {
+    color: var(--primary-lighter) !important;
+    text-decoration: none;
+}
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.input-group-preco {
+    max-width: 250px; /* Limita a largura total */
+}
+
+.input-group-preco .input-group-text {
+    background-color: #f8f9fa;
+    border-color: #e9ecef;
+    font-weight: 600;
+    font-size: 0.875rem; /* Tamanho menor para o R$ */
+    padding: 0.5rem 0.75rem;
+    min-width: 50px; /* Largura fixa para o R$ */
+    justify-content: center;
+}
+
+.input-group-preco .form-control {
+    text-align: right;
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.input-group-preco .input-group-text:last-child {
+    font-size: 0.75rem; /* Menor ainda para o ",00" */
+    min-width: 40px;
+    color: #6c757d; /* Cor mais suave */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0 60px;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section img {
+        margin-top: 2rem;
+        transform: none;
+    }
+    
+    .destaques {
+        padding: 60px 0;
+    }
+    
+    .produto-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* ===== EFEITOS ESPECIAIS ===== */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* ===== SCROLL SUAVE ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== LOADING ELEGANTE ===== */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid var(--primary-soft);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
