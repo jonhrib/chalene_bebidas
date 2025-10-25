@@ -7,7 +7,6 @@ const initialProducts = [
   { id: 1, name: 'Cerveja Artesanal IPA', price: 12.90, category: 'Cervejas', featured: true, description: 'Cerveja artesanal com notas cítricas e amargor equilibrado', image: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop' },
   { id: 2, name: 'Vinho Tinto Malbec', price: 45.50, category: 'Vinhos', featured: true, description: 'Vinho tinto argentino com corpo médio e taninos suaves', image: 'https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=400&h=300&fit=crop' },
   { id: 3, name: 'Whisky Escocês 12 anos', price: 189.90, category: 'Destilados', featured: false, description: 'Whisky single malt com notas de baunilha e carvalho', image: 'https://images.unsplash.com/photo-1608270586620-248524c67de9?w=400&h=300&fit=crop' },
-  { id: 4, name: 'Café Gourmet em Grãos', price: 28.75, category: 'Cafés', featured: true, description: 'Grãos 100% arábica torrados na medida certa', image: 'https://images.unsplash.com/photo-1587734195503-904fca47e0e9?w=400&h=300&fit=crop' },
   { id: 5, name: 'Champagne Brut', price: 89.00, category: 'Espumantes', featured: false, description: 'Espumante seco perfeito para celebrações', image: 'https://images.unsplash.com/photo-1535958636471-bd4c8ebf70c4?w=400&h=300&fit=crop' },
   { id: 6, name: 'Cachaça Premium', price: 65.30, category: 'Destilados', featured: true, description: 'Cachaça envelhecida em carvalho francês', image: 'https://images.unsplash.com/photo-1571902943206-3058411b6e6e?w=400&h=300&fit=crop' }
 ];
